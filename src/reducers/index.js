@@ -1,4 +1,4 @@
-import { FETCH_FOOD_LOADING, FETCH_FOOD_SUCCESS, FETCH_FOOD_FAIL } from "../actions";
+import { FETCH_FOOD_SUCCESS, FETCH_FOOD_FAIL } from "../actions";
 
 const initialState = {
     food: null,
@@ -8,11 +8,6 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
     switch(action.type){
-        case(FETCH_FOOD_LOADING):
-            return ({
-                ...state,
-                isFetching: true,
-            })
         case(FETCH_FOOD_SUCCESS):
             return ({
                 ...state,
